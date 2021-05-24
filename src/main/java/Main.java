@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         DataPrep dataPrep = new DataPrep("data\\zoo-dataset.csv");
         dataPrep.init();
-//
-//        Model model = new Model(dataPrep.getTrainingData(),dataPrep.getTestingData(),dataPrep.getFEATURES_COUNT(),dataPrep.getCLASSES_COUNT());
-//        model.run();
+
+        Model model = new Model(dataPrep.getTrainingData(),dataPrep.getTestingData(),dataPrep.getFEATURES_COUNT(),dataPrep.getCLASSES_COUNT(),1);
+        model.run();
     }
 }

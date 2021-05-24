@@ -27,7 +27,7 @@ public class DataPrep {
     private int BATCH_SIZE = 150;
     private int FEATURES_COUNT = -1;
     private int CLASSES_COUNT = -1;
-    private double TRAIN_TEST_RATIO = 0.65;
+    private double TRAIN_TEST_RATIO = 0.8;
 
     private RecordReader recordReader = null;
     private DataSet data = null;
@@ -65,7 +65,8 @@ public class DataPrep {
     }
 
     private void loadData() throws IOException {
-        DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,BATCH_SIZE);
+
+        DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,BATCH_SIZE,FEATURES_COUNT,CLASSES_COUNT);
         data = iterator.next();
         data.shuffle(7);
     }
@@ -109,6 +110,7 @@ public class DataPrep {
     private void getFeaturesFromDataset() throws IOException {
         String[] header = entries.get(0); //first entry consists of labels
         features.addAll(Arrays.asList(header));
+        features.remove(0);
     }
 
     private void getClassesFromDataset() {
