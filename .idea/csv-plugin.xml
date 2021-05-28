@@ -3,13 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\data\zoo-data-transformed.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\data\zoo-dataset-transformed.csv">
           <value>
             <Attribute>
@@ -17,21 +10,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\main\resources\zoo-dataset-transformed.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\src\main\resources\zoo-dataset.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\target\classes\zoo-dataset-transformed.csv">
+        <entry key="\data\zoo-dataset.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -1,3 +1,5 @@
+package ai;
+
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
@@ -17,20 +19,20 @@ import org.nd4j.linalg.learning.config.Sgd;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 
 public class Model {
-    private DataSet trainingData;
-    private DataSet testingData;
+    private final DataSet trainingData;
+    private final DataSet testingData;
     private MultiLayerConfiguration configuration;
     private MultiLayerNetwork model;
 
-    private Activation ACTIVATION_INITIAL = Activation.RELU;
-    private Activation ACTIVATION = Activation.SOFTMAX;
-    private WeightInit WEIGHT_INIT = WeightInit.RELU;
-    private LossFunctions.LossFunction LOSS_FUNCTION = LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD;
-    private double LEARNING_RATE = 1e-6;
-    private double MOMENTUM = 0.9;
+    private final Activation ACTIVATION_INITIAL = Activation.RELU;
+    private final Activation ACTIVATION = Activation.SOFTMAX;
+    private final WeightInit WEIGHT_INIT = WeightInit.RELU;
+    private final LossFunctions.LossFunction LOSS_FUNCTION = LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD;
+    private final double LEARNING_RATE = 1e-6;
+    private final double MOMENTUM = 0.9;
 
-    private int FEATURES_COUNT;
-    private int CLASSES_COUNT;
+    private final int FEATURES_COUNT;
+    private final int CLASSES_COUNT;
     private int HIDDEN_LAYER_NEURONS;
     private int EPOCHS = 10;
 
@@ -50,6 +52,9 @@ public class Model {
     }
 
     private void createNNArchitecture(){
+        int INPUT_NEURONS = 10;
+        int HIDDEN_NEURONS = 10;
+        int OUTPUT_NEURONS = 10;
     configuration = new NeuralNetConfiguration.Builder()
             .seed(123)
             .weightInit(WeightInit.XAVIER)
@@ -62,7 +67,7 @@ public class Model {
                     .nOut(HIDDEN_NEURONS)
                     .activation(Activation.RELU)
                     .build())
-            .layer(1, new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD)
+            .layer(1, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
                     .nIn(HIDDEN_NEURONS)
                     .nOut(OUTPUT_NEURONS)
                     .activation(Activation.SOFTMAX)
