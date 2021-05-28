@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Find Your Animal!</title>
+
+    <script src = "jquery.js"></script>
+    <script>
+     function myFunction() {
+        $.post( "localhost:5432/api/send", function( data ) {
+                 //As soon as the browser finished downloading, this function is called.
+                 $('#demo').html(data);
+            });
+        }
+    </script>
+</head>
+
+<body>
+<h1 class="mainTitle">Find Your Animal</h1>
+<h2 id="text1" class="text1">Think in an animal and i'll try to guess it</h2>
+<div id="userInterface">
+    <button id="btnOk" class="btn" onclick="myFunction()" style="display:block">Ok</button>
+    <button id="btnYes" class="btn" onclick="do_yes(); return false;" style="display:none">Yes</button>
+    <button id="btnNo" class="btn" onclick="do_no(); return false;" style="display:none;">No</button>
+    <button id="btnAgain" class="btn" onclick="do_again(); return false;" style="display:none;">Play Again</button>
+    <h3 id="animName" style="display:none;"> New Animal: <input id="inpName" type="text"></h3>
+    <h3 id="animDiff" style="display:none;"> <label id="textDiff"> </label><input id="inpDiff" type="text"></h3>
+    <button id="btnReady" class="btn" onclick="do_ready(); return false;" style="display:none;">Ready</button>
+</div>
+<p id="demo"></p>
+</body>
+</html>
