@@ -27,14 +27,13 @@ body {
  	margin-left: auto;
  }
 
-#form{
-    width: 100px;
-     	margin-right: auto;
-     	margin-left: auto;
+fieldset {
+    border: 0;
 }
+
 .question1, .question2{
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 30px;
     color:#fff;
     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }

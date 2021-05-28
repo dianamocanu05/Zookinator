@@ -27,6 +27,17 @@ body {
  	margin-left: auto;
  }
 
+fieldset {
+    border: 0;
+}
+
+.question1, .question2{
+    font-family: sans-serif;
+    font-size: 20px;
+    color:#fff;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
 .btn {
 	font-family: sans-serif;
 	font-size: 30px;
