@@ -5,29 +5,100 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title> Find Your Animal!</title>
 
-    <script src="jquery.js"></script>
-    <script>
-    document.getElementById("clickMe").onclick = function () { alert('hello!'); };
-     var el = document.getElementById("clickMe");
-        if (el.addEventListener)
-    el.addEventListener("click", doFunction, false);
-        else if (el.attachEvent)
-    el.attachEvent('onclick', doFunction);
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./functions.js"></script>
 </head>
 
 <body>
-<h1 class="mainTitle">Find Your Animal</h1>
-<h2 id="text1" class="text1">Think in an animal and i'll try to guess it</h2>
-<div id="userInterface">
-    <button id="btnOk" class="btn" onclick="myFunction()" style="display:block">Ok</button>
-    <button id="btnYes" class="btn" onclick="do_yes(); return false;" style="display:none">Yes</button>
-    <button id="btnNo" class="btn" onclick="do_no(); return false;" style="display:none;">No</button>
-    <button id="btnAgain" class="btn" onclick="do_again(); return false;" style="display:none;">Play Again</button>
-    <h3 id="animName" style="display:none;"> New Animal: <input id="inpName" type="text"></h3>
-    <h3 id="animDiff" style="display:none;"><label id="textDiff"> </label><input id="inpDiff" type="text"></h3>
-    <button id="btnReady" class="btn" onclick="do_ready(); return false;" style="display:none;">Ready</button>
+<h1 class="mainTitle">Zookinator</h1>
+<h2 id="text1" class="text1">Think of an animal and then respond the questions below.</h2>
+
+<div id="form">
+    <fieldset id="question1">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question2">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question3">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question4">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question5">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question6">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question7">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question8">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question9">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question10">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question11">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question12">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question13">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question14">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question15">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question16">
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
 </div>
-<p id="demo"></p>
+
+<div id="userInterface">
+    <button id="btnOk" class="btn" onclick="post();" style="display:block">Guess it!</button>
+</div>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
--1,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,class_type	
+-1,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,class_type
 0,1,0,0,1,0,0,1,1,1,1,0,0,4,0,0,1,1	
 1,1,0,0,1,0,0,0,1,1,1,0,0,4,1,0,1,1	
 2,0,0,1,0,0,1,1,1,1,0,0,1,0,1,0,0,4	
@@ -142,4 +142,6 @@
 140,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,7	
 141,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,7	
 142,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1,7	
-143,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,7	
+143,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,7
+144,1,0,0,1,0,0,1,1,1,1,0,0,4,1,1,0,1
+145,1,0,0,1,0,0,1,1,1,1,0,0,4,1,1,1,1
