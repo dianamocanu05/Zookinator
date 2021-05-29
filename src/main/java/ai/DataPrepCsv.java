@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class DataPrep {
+public class DataPrepCsv {
     private String path;
     private final List<String> features = new ArrayList<>();
     private final List<String> classes = new ArrayList<>();
@@ -36,11 +36,11 @@ public class DataPrep {
     private DataSet trainingData = null;
     private DataSet testingData = null;
 
-    public DataPrep(String path) {
+    public DataPrepCsv(String path) {
         this.path = path;
     }
 
-    public DataPrep(String path, int batchSize, double trainTestRatio) {
+    public DataPrepCsv(String path, int batchSize, double trainTestRatio) {
         this.path = path;
         this.BATCH_SIZE = batchSize;
         this.TRAIN_TEST_RATIO = trainTestRatio;
