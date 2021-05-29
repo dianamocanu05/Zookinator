@@ -100,5 +100,13 @@
     <button id="btnOk" class="btn" onclick="post();" style="display:block">Guess it!</button>
 </div>
 
+<!--upload button-->
+<form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+  <div id="uploadBtn" onclick="getFile();">click to upload a file</div>
+
+<div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile" type="file" value="upload" onchange="sub(this);" /></div>
+
+</form>
+
 </body>
 </html>

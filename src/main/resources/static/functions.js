@@ -26,15 +26,25 @@ function getResponses(){
     return map;
 }
 
-function mapToJson(Map map){
-    object = {};
-    map.forEach((value, key) => {
-        var keys = key.split('.'),
-            last = keys.pop();
-        keys.reduce((r, a) => r[a] = r[a] || {}, object)[last] = value;
-    });
-    return object;
+//function mapToJson(Map map){
+//    object = {};
+//    map.forEach((value, key) => {
+//        var keys = key.split('.'),
+//            last = keys.pop();
+//        keys.reduce((r, a) => r[a] = r[a] || {}, object)[last] = value;
+//    });
+//    return object;
+//}
+
+function getFile() {
+  document.getElementById("upfile").click();
 }
 
-
+function sub(obj) {
+  var file = obj.value;
+  var fileName = file.split("\\");
+  document.getElementById("uploadBtn").innerHTML = fileName[fileName.length - 1];
+  document.myForm.submit();
+  event.preventDefault();
+}
 

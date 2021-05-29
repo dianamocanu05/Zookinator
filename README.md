@@ -4,6 +4,7 @@
 
 @author: Diana Mocanu 2A3
 ## 0. TODO
+    UPDATE : due to the nature of the dataset -> adding an image upload feature
     - data preparation (DONE)
     - nn
     - predict
@@ -11,6 +12,8 @@
     - react app for GUI
     - localization & internationalization -> for questions
     - JWT secure auth
+    - decision tree algorithm
+    - image upload and post via api to be predicted
 
 ## 1. Dataset
 **src/main/resources/zoo-dataset.csv** :  merged from two datasets:
