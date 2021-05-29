@@ -9,6 +9,9 @@
     - predict
     - small api
     - react app for GUI
+    - localization & internationalization -> for questions
+    - JWT secure auth
+
 ## 1. Dataset
 **src/main/resources/zoo-dataset.csv** :  merged from two datasets:
 
