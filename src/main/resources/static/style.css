@@ -1,8 +1,7 @@
 .mainTitle {
 	font-family: sans-serif;
 	font-size: 90px;
-	color:#fff;
-	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+	color: brown
 }
 
 .text1 {
@@ -24,16 +23,13 @@ body {
  	margin-left: auto;
  }
 
-.wrap {
-width: 100%;
-overflow:auo;
-}
+
 
 .fleft {
     float:left;
-    width: 50%;
 background:#F3F379;
-    height: 700px;
+    height: 228px;
+    width: 950px;
     border: 2px
     font-family: sans-serif;
     	font-size: 60px;
@@ -44,9 +40,9 @@ background:#F3F379;
 .fright {
 float: right;
     background:#FE9E78;
-    height: 700px;
+    height: 228px;
     text-align : center;
-    width: 50%;
+    width: 950;
     border: 2px
         font-family: sans-serif;
         	font-size: 60px;
@@ -54,10 +50,34 @@ float: right;
 
 }
 
-.form{
-      background-color: #eeeeee;
-      align-items: center;
-      max-width:300px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.column fleft{
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+form{
+      align-items: right;
+      max-width:150px;
       padding:16px;
 }
 fieldset {
@@ -68,7 +88,7 @@ fieldset {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: inline-vertical;
   margin: 30px 60px;
 }
 
