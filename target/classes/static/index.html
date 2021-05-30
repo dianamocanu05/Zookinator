@@ -101,10 +101,15 @@
 </div>
 
 <!--upload button-->
-<form method="POST" onchange="getFile()" enctype="multipart/form-data" id="fileUploadForm" action="link" target="myFrame">
-    <input type="file" name="image" id="photo"/><br/><br/>
-    <input type="submit" value="Submit"  id="btnSubmit"/>
+
+<form method="POST" enctype="multipart/form-data" id="fileUploadForm" action="http://localhost:5432/api/image" target="myFrame">
+<!--    <input type="text" name="title"/><br/>-->
+<!--    <input type="text" name="description"/><br/><br/>-->
+    <input type="file" name="image"/><br/><br/>
+    <input type="submit" value="Upload" id="btnSubmit"/>
 </form>
+
+
 <iframe name="myFrame" height=0 width=0></iframe>
 
 </body>

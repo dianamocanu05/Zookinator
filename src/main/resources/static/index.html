@@ -11,6 +11,8 @@
 
 <body>
 <h1 class="mainTitle">Zookinator</h1>
+
+
 <h2 id="text1" class="text1">Think of an animal and then respond the questions below.</h2>
 
 <!--<div id="form">-->
@@ -102,14 +104,13 @@
 
 <!--upload button-->
 
-
-<form target = "myFrame">
-    <div>
-        <label>Select file to upload</label>
-        <input type="file" id="fileinput">
-    </div>
-    <button type="submit">Submit</button>
+<form method="POST" enctype="multipart/form-data" id="fileUploadForm" action="http://localhost:5432/api/image" target="myFrame">
+<!--    <input type="text" name="title"/><br/>-->
+<!--    <input type="text" name="description"/><br/><br/>-->
+    <input type="file" name="image"/><br/><br/>
+    <input type="submit" value="Upload" id="btnSubmit"/>
 </form>
+
 
 <iframe name="myFrame" height=0 width=0></iframe>
 

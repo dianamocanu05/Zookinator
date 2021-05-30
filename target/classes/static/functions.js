@@ -25,35 +25,3 @@ function getResponses(){
     }
     return map;
 }
-
-//function mapToJson(Map map){
-//    object = {};
-//    map.forEach((value, key) => {
-//        var keys = key.split('.'),
-//            last = keys.pop();
-//        keys.reduce((r, a) => r[a] = r[a] || {}, object)[last] = value;
-//    });
-//    return object;
-//}
-
-function getFile(){
-    var photo = document.getElementById("photo");
-    postImage(photo);
-}
-
-function postImage(fileData){
-    var formData = new FormData();
-    formData.append('file',fileData.value);
-    $.ajax({
-        type: 'POST',
-        url : "http://localhost:5432/api/image",
-         headers: {
-            "Content-type": "application/json",
-            "Access-Control-Allow-Origin": "*"
-          },
-        data: formData,
-         success: function(data) { alert("ajax worked"); },
-         error: function(data) {alert("ajax error"); }
-      });
-}
-
