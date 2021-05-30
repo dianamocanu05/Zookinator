@@ -20,7 +20,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class Algorithms {
-
     public static Prediction decisionTree(Response response) throws Exception {
         ConverterUtils.DataSource source = new ConverterUtils.DataSource("data\\zoo-dataset.arff");
         Instances data = source.getDataSet();

@@ -11,8 +11,8 @@ $.ajax({
         "Access-Control-Allow-Origin": "*"
       },
     data: JSON.stringify(object),
-    // success: function(data) { alert("ajax worked"); },
-    // error: function(data) {alert("ajax error"); },
+    success: function(data) { alert("success",data); },
+    error: function(data) {alert("fail",data); },
      dataType: 'json'
   })
 }

@@ -1,5 +1,6 @@
 package api;
 
+import ai.Algorithms;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,11 +11,10 @@ public class ResponseController{
 
     @PostMapping
     @RequestMapping("api/send")
-    private Prediction sendResponse(@RequestBody Response response){
+    private Prediction sendResponse(@RequestBody Response response) throws Exception {
         System.out.println("Received the user responses...");
-        //predict
-        System.out.println(response.breathes + " " + response.legs);
+        Prediction prediction = Algorithms.decisionTree(response);
         System.out.println("Sending prediction...");
-        return new Prediction("caine cleo",100.0);
+        return prediction;
     }
 }
