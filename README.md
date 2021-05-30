@@ -6,11 +6,8 @@
 ## 0. TODO
    - nn 
    - interpret prediction
-   - api send/receive image (DONE)
-   - decision tree
-   - fetch quiz responses
    - send predictions
-   - web design
+   - edit README.md
 
 ## 1. Dataset
 **src/main/resources/zoo-dataset.csv** :  merged from two datasets:
@@ -23,11 +20,15 @@
 
 ## 2. Neuronal Network
 ![Simplified NN Architecture](media/nn.png)
-## 3. Web
 
-## 4. User Manual
+## 3. Machine learning
+decision tree
 
-## 5. Resources
+## 4. Web
+api
+## 5. User Manual
+
+## 6. Resources
 
 
 

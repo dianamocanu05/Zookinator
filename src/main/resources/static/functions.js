@@ -11,12 +11,32 @@ $.ajax({
         "Access-Control-Allow-Origin": "*"
       },
     data: JSON.stringify(object),
-    success: function(data) { alert("success",data); },
-    error: function(data) {alert("fail",data); },
+    success: function(data) { successCallback(data) },
+    error: function(data) {failCallback(data) },
      dataType: 'json'
   })
 }
 
+function postImage(){
+    $('#form').submit(function(){
+         console.log('HERE');
+        $.ajax({
+          url: $('#form').attr('action'),
+          type: 'POST',
+          data : $('#form').serialize(),
+          success: function(data){
+            successCallback(data);
+          }
+        });
+        return false;
+    });
+
+}
+
+
+function successCallback(responseObj){
+    alert("You thought about a " + responseObj.prediction)
+}
 function getResponses(){
 
         var checkboxes = document.getElementsByName("input");
@@ -37,4 +57,15 @@ function getResponses(){
         })
         return object;
 
+}
+
+window.onload = function(){
+    document.forms["fileUploadForm"].onsubmit = async(e) => {
+      e.preventDefault();
+      const params = new URLSearchParams(new FormData(e.target));
+      console.log(params);
+      fetch("http://localhost:5432/api/image", {method:"POST", body:params});
+      const response = await new Response(params).text();
+      console.log(response);
+    }
 }

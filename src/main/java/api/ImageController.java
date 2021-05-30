@@ -13,27 +13,30 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.nio.file.Files;
+import ai.Model;
 @RestController
 public class ImageController {
 
-
+    private static final String tmpPath = "./upload.jpg";
     @PostMapping
     @RequestMapping("api/image")
-    public ResponseEntity<?> getImage(@ModelAttribute FormWrapper formWrapper) throws IOException {
+    public Prediction getImage(@ModelAttribute FormWrapper formWrapper) throws IOException {
         System.out.println("RECEIVED IMAGE!");
+        Prediction prediction = null;
         try {
             saveImage(formWrapper.getImage());
+            prediction = new Prediction("cleo",100.0);
+            //prediction = Model.predict(tmpPath);
         }catch (Exception e){
-            System.out.println("NEY");
-            return new ResponseEntity("NASPAAA", HttpStatus.I_AM_A_TEAPOT);
+            return null;
         }
-        return new ResponseEntity("Successfully saved!", HttpStatus.OK);
+        return prediction;
     }
 
     private void saveImage(MultipartFile file) throws IOException {
         if(!file.isEmpty()){
             byte[] bytes = file.getBytes();
-            Files.write(java.nio.file.Path.of("./upload.jpg"),bytes);
+            Files.write(java.nio.file.Path.of(tmpPath),bytes);
         }
     }
 }
