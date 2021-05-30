@@ -1,6 +1,5 @@
 function post(){
 responses = getResponses();
-object = mapToJson(responses);
 $.ajax({
     type: 'POST',
     url : "http://localhost:5432/api/send",
@@ -17,11 +16,16 @@ $.ajax({
 }
 
 function getResponses(){
-    var checkboxes = document.getElementsByName("input");
-    var map = new Map();
-    var tags = ["hasHair","hasFeathers","laysEggs","hasMilk","isAirborne","isAquatic","isPredator","isToothed","hasBackbone","breathes,isVenomous","hasFins","legs","hasTail,isDomestic","isCatsized"];
-    for(var i = 0; i < checkboxes.length; i++) {
-            map.put(tags[i], checkboxes[i]);
-    }
-    return map;
+
+        var checkboxes = document.getElementsByName("input");
+        var checkboxChecked = [];
+
+        for(var i = 0; i < checkboxes.length; i++) {
+            if(checkboxes[i].checked) {
+                checkboxChecked.push(checkboxes[i]);
+            }
+        }
+
+        alert(checkboxChecked.length);
+
 }

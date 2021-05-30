@@ -62,10 +62,13 @@ float: right;
   max-width: 50%;
   padding: 0 4px;
 }
-
+.column form{
+    float:right;
+    align:right;
+}
 .column img {
   margin-top: 8px;
-  vertical-align: middle;
+  vertical-align : left;
   width: 100%;
 }
 
@@ -76,7 +79,8 @@ float: right;
 }
 
 form{
-      align-items: right;
+       align:center;
+      align-items: left;
       max-width:150px;
       padding:16px;
 }
