@@ -55,29 +55,29 @@ public class Model {
 
     public void run(){
         this.HIDDEN_LAYER_NEURONS = (CLASSES_COUNT + 1)/2;
-        createNNArchitecture();
+        //createNNArchitecture();
         runModel();
         evaluate();
     }
 
-    private void createNNArchitecture(){
-     configuration = new NeuralNetConfiguration.Builder()
-                .seed(1611)
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater()
-                .list()
-                .layer(0, new Convolution2D.)
-                .layer(1, pooling2x2Stride2())
-                .layer(2, conv3x3Stride1Padding2())
-                .layer(3, pooling2x2Stride1())
-                .layer(4, conv3x3Stride1Padding1())
-                .layer(5, pooling2x2Stride1())
-                .layer(6, dense())
-                .pretrain(false)
-                .backprop(true)
-                .setInputType(dataSetService.inputType())
-                .build();
-    }
+//    private void createNNArchitecture(){
+//     configuration = new NeuralNetConfiguration.Builder()
+//                .seed(1611)
+//                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+//                .updater()
+//                .list()
+//                .layer(0, new Convolution2D.)
+//                .layer(1, pooling2x2Stride2())
+//                .layer(2, conv3x3Stride1Padding2())
+//                .layer(3, pooling2x2Stride1())
+//                .layer(4, conv3x3Stride1Padding1())
+//                .layer(5, pooling2x2Stride1())
+//                .layer(6, dense())
+//                .pretrain(false)
+//                .backprop(true)
+//                .setInputType(dataSetService.inputType())
+//                .build();
+//    }
 
     private void runModel(){
         model = new MultiLayerNetwork(configuration);

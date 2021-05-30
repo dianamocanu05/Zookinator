@@ -31,18 +31,14 @@ fieldset {
     border: 0;
 }
 
-#uploadBtn {
-  position: relative;
-  top: 150px;
-  font-family: calibri;
-  width: 150px;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border: 1px dashed #BBB;
-  text-align: center;
-  background-color: #DDD;
+btnSubmit{
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .question1, .question2{
