@@ -3,116 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title> Find Your Animal!</title>
+    <title> Zookinator</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./functions.js"></script>
 </head>
 
-<body>
+<body style="background-color:#B0ECAB;">
 <h1 class="mainTitle">Zookinator</h1>
+<div class="wrap">
+    <div class="fleft"><p>Take the quiz!</div>
+    <div class="fright"><p>Upload an image!</div>
 
-
-<h2 id="text1" class="text1">Think of an animal and then respond the questions below.</h2>
-
-<!--<div id="form">-->
-<!--    <fieldset id="question1" >-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question2">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question3">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question4">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question5">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question6">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question7">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question8">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question9">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question10">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question11">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question12">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question13">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question14">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question15">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--    <fieldset id="question16">-->
-<!--        <legend>Does it have hair?</legend>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>-->
-<!--        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>-->
-<!--    </fieldset>-->
-<!--</div>-->
-
-<div id="userInterface">
-    <button id="btnOk" class="btn" onclick="post();" style="display:block">Guess it!</button>
 </div>
 
-<!--upload button-->
-
-<form method="POST" enctype="multipart/form-data" id="fileUploadForm" action="http://localhost:5432/api/image" target="myFrame">
-<!--    <input type="text" name="title"/><br/>-->
-<!--    <input type="text" name="description"/><br/><br/>-->
-    <input type="file" name="image"/><br/><br/>
-    <input type="submit" value="Upload" id="btnSubmit"/>
-</form>
 
 
-<iframe name="myFrame" height=0 width=0></iframe>
+
+
+
+
+<!--<form method="POST" enctype="multipart/form-data" id="fileUploadForm" action="http://localhost:5432/api/image" target="myFrame">-->
+<!--&lt;!&ndash;    <input type="text" name="title"/><br/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input type="text" name="description"/><br/><br/>&ndash;&gt;-->
+<!--    <input type="file" name="image"/><br/><br/>-->
+<!--    <input type="submit" value="Upload" id="btnSubmit"/>-->
+<!--</form>-->
+
+
+<!--<iframe name="myFrame" height=0 width=0></iframe>-->
 
 </body>
 </html>

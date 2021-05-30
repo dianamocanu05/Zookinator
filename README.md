@@ -6,7 +6,7 @@
 ## 0. TODO
    - nn 
    - interpret prediction
-   - api send/receive image
+   - api send/receive image (DONE)
    - decision tree
    - fetch quiz responses
    - send predictions

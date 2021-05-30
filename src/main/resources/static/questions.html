@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Zookinator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./functions.js"></script>
+</head>
+<body>
+<h1 class="mainTitle">Zookinator</h1>
+
+<h2 id="text1" class="text1">Think of an animal and then respond the questions below.</h2>
+
+
+<div id="form">
+    <fieldset id="question1" >
+        <legend>Does it have hair?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question2">
+        <legend>Does it have feathers?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question3">
+        <legend>Does it lay eggs?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question4">
+        <legend>Does it have milk?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question5">
+        <legend>Is it airborne?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question6">
+        <legend>Is it aquatic?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question7">
+        <legend>Is it a predator?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question8">
+        <legend>Is it toothed?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question9">
+        <legend>Does it have a backbone?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question10">
+        <legend>Does it breathe?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question11">
+        <legend>Is it venomous?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question12">
+        <legend>Does it have fins?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question13">
+        <legend>How many legs does it have?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">0<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">2<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">4<BR></label>
+    </fieldset>
+    <fieldset id="question14">
+        <legend>Does it have a tail?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question15">
+        <legend>Is ir domestic?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+    <fieldset id="question16">
+        <legend>Is it catsized?</legend>
+        <label><INPUT TYPE="checkbox" NAME="q1" VALUE="wrong">true<BR></label>
+        <label><INPUT TYPE="checkbox" NAME="q2" VALUE="wrong">false<BR></label>
+    </fieldset>
+</div>
+
+<div id="userInterface">
+    <button id="btnOk" class="btn" onclick="post();" style="display:block">Guess it!</button>
+</div>
+
+</body>
+</html>

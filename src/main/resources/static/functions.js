@@ -19,7 +19,7 @@ $.ajax({
 function getResponses(){
     var checkboxes = document.getElementsByName("input");
     var map = new Map();
-    var tags = [hasHair,hasFeathers,laysEggs,hasMilk,isAirborne,isAquatic,isPredator,isToothed,hasBackbone,breathes,isVenomous,hasFins,legs,hasTail,isDomestic,isCatsized];
+    var tags = ["hasHair","hasFeathers","laysEggs","hasMilk","isAirborne","isAquatic","isPredator","isToothed","hasBackbone","breathes,isVenomous","hasFins","legs","hasTail,isDomestic","isCatsized"];
     for(var i = 0; i < checkboxes.length; i++) {
             map.put(tags[i], checkboxes[i]);
     }
