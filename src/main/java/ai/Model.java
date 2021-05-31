@@ -1,6 +1,5 @@
 package ai;
 import org.datavec.image.loader.NativeImageLoader;
-import org.deeplearning4j.core.storage.StatsStorage;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.GradientNormalization;
@@ -12,9 +11,6 @@ import org.deeplearning4j.nn.conf.layers.*;
 import org.deeplearning4j.nn.modelimport.keras.layers.core.KerasFlatten;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
-import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
-import org.deeplearning4j.ui.model.stats.StatsListener;
-import org.deeplearning4j.ui.model.storage.FileStatsStorage;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
@@ -26,7 +22,7 @@ import org.nd4j.linalg.learning.config.AdaDelta;
 import org.nd4j.linalg.learning.config.Adam;
 import org.nd4j.linalg.learning.config.Nesterovs;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
-import org.deeplearning4j.ui.api.UIServer;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -131,7 +127,7 @@ public class Model {
 
     public static String predict(String path) throws IOException {
         System.out.println("Started prediction...");
-        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(new File("./model2.h5"),false);
+        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(new File("./model.h5"),true);
         System.out.println("Loaded model...");
         File f=new File(path);
         System.out.println("x");
@@ -144,6 +140,7 @@ public class Model {
         scalar.transform(image);
         System.out.println("xxxxx");
         INDArray output = model.output(image);
+        System.out.println(output);
         System.out.println("Finishing...");
         return explainPrediction(output);
     }
@@ -152,7 +149,7 @@ public class Model {
         double[] predictions = array.toDoubleVector();
         double maximum = -1;
         int maxI = -1;
-        for(int i=0;i<11;i++){
+        for(int i=0;i<12;i++){
             if(predictions[i] > maximum){
                 maximum = predictions[i];
                 maxI = i;
