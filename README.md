@@ -1,4 +1,4 @@
-# README
+# ZOOKINATOR
 **DeepLearner** project for Advanced Programming Course 2020-2021 @ FII UAIC
 
 
