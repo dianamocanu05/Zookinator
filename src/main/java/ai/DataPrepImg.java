@@ -32,7 +32,7 @@ public class DataPrepImg {
     private final int width = 50;
     private final int channels = 1;
     private final int batchSize = 32;
-    private int labelIndex = 1;
+    private final int labelIndex = 1;
 
 
 

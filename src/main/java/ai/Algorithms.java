@@ -2,8 +2,7 @@ package ai;
 
 import api.Prediction;
 import api.Response;
-import smile.classification.DecisionTree;
-import smile.data.DataFrame;
+
 import weka.attributeSelection.AttributeSelection;
 import weka.attributeSelection.InfoGainAttributeEval;
 import weka.attributeSelection.Ranker;

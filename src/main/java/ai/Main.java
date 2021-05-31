@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 
 public class Main {
-    private static Logger log = LoggerFactory.getLogger("Main.class");
+    private static final Logger log = LoggerFactory.getLogger("Main.class");
 
     public static void main(String[] args) throws IOException, InterruptedException {
         DataPrepImg dataPrepImg = new DataPrepImg("data\\images");
