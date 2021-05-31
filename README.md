@@ -3,11 +3,6 @@
 
 
 @author: Diana Mocanu 2A3
-## 0. TODO
-   - nn 
-   - interpret prediction
-   - send predictions
-   - edit README.md
 
 ## Overview & Indications
 The project consists of a web application which allows the user to either take a quiz,
