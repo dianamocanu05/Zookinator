@@ -84,7 +84,7 @@ Response json example:
 "isCatsized" : "true"
 }
 ```
-The web application is running at **http:\\localhost:5432**
+The web application is running at **http:\\\localhost:5432**
 
 
 
