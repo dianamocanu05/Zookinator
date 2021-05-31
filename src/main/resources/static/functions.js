@@ -17,21 +17,21 @@ $.ajax({
   })
 }
 
-function postImage(){
-    $('#form').submit(function(){
-         console.log('HERE');
-        $.ajax({
-          url: $('#form').attr('action'),
-          type: 'POST',
-          data : $('#form').serialize(),
-          success: function(data){
-            successCallback(data);
-          }
-        });
-        return false;
-    });
-
-}
+//function postImage(){
+//    $('#form').submit(function(){
+//         console.log('HERE');
+//        $.ajax({
+//          url: $('#form').attr('action'),
+//          type: 'POST',
+//          data : $('#form').serialize(),
+//          success: function(data){
+//            successCallback(data);
+//          }
+//        });
+//        return false;
+//    });
+//
+//}
 
 
 function successCallback(responseObj){
@@ -59,13 +59,13 @@ function getResponses(){
 
 }
 
-window.onload = function(){
-    document.forms["fileUploadForm"].onsubmit = async(e) => {
-      e.preventDefault();
-      const params = new URLSearchParams(new FormData(e.target));
-      console.log(params);
-      fetch("http://localhost:5432/api/image", {method:"POST", body:params});
-      const response = await new Response(params).text();
-      console.log(response);
-    }
-}
+//window.onload = function(){
+//    document.forms["fileUploadForm"].onsubmit = async(e) => {
+//      e.preventDefault();
+//      const params = new URLSearchParams(new FormData(e.target));
+//      console.log(params);
+//      fetch("http://localhost:5432/api/image", {method:"POST", body:params});
+//      const response = await new Response(params).text();
+//      console.log(response);
+//    }
+//}

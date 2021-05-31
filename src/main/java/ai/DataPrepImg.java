@@ -1,31 +1,19 @@
 package ai;
-
 import org.datavec.api.io.filters.BalancedPathFilter;
 import org.datavec.api.io.labels.ParentPathLabelGenerator;
 import org.datavec.api.split.FileSplit;
 import org.datavec.api.split.InputSplit;
 import org.datavec.image.loader.BaseImageLoader;
-import org.datavec.image.loader.NativeImageLoader;
 import org.datavec.image.recordreader.ImageRecordReader;
 import org.datavec.image.transform.ImageTransform;
 import org.datavec.image.transform.MultiImageTransform;
 import org.datavec.image.transform.ShowImageTransform;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
-import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
-import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
-import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
 
-import javax.imageio.ImageTranscoder;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class DataPrepImg {
     private final String folderPath;
@@ -43,7 +31,7 @@ public class DataPrepImg {
     private final int height = 50;
     private final int width = 50;
     private final int channels = 1;
-    private final int batchSize = 10;
+    private final int batchSize = 32;
     private int labelIndex = 1;
 
 
@@ -57,7 +45,10 @@ public class DataPrepImg {
         splitTestTrain();
         transformImages();
         trainIterator = new RecordReaderDataSetIterator(trainReader,batchSize,labelIndex,outputNum);
+        trainIterator.next().shuffle();
         testIterator = new RecordReaderDataSetIterator(testReader, batchSize, labelIndex, outputNum);
+        testIterator.next().shuffle();
+
     }
 
     private void loadDataset(){
@@ -75,11 +66,11 @@ public class DataPrepImg {
 
     private void transformImages() throws IOException {
         trainReader = new ImageRecordReader(height,width,channels,labelMaker);
-        ImageTransform imageTransform = new MultiImageTransform(random,new ShowImageTransform("Display"));
+        ImageTransform imageTransform = new MultiImageTransform(random);
         trainReader.initialize(trainData,imageTransform);
 
         testReader = new ImageRecordReader(height,width,channels,labelMaker);
-        ImageTransform imageTransformTest = new MultiImageTransform(random,new ShowImageTransform("Display"));
+        ImageTransform imageTransformTest = new MultiImageTransform(random);
         testReader.initialize(testingData,imageTransform);
 
         outputNum = trainReader.numLabels();

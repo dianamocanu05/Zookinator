@@ -18,7 +18,7 @@
         <hibernate.version>5.1.0.Final</hibernate.version>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
-        <dl4j.version>1.0.0-alpha</dl4j.version>
+        <dl4j.version>1.0.0-M1</dl4j.version>
     </properties>
 <!--    <repositories>-->
 <!--        <repository>-->
@@ -31,6 +31,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacpp</artifactId>
+            <version>1.5.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>au.com.bytecode</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>2.4</version>
         </dependency>
 
 <!--        <dependency>-->
@@ -137,6 +148,11 @@
             <groupId>org.deeplearning4j</groupId>
             <artifactId>deeplearning4j-core</artifactId>
             <version>${dl4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-ui</artifactId>
+            <version>1.0.0-M1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cassandra</groupId>

@@ -25,11 +25,11 @@ public class ImageController {
         Prediction prediction = null;
         try {
             saveImage(formWrapper.getImage());
-            prediction = new Prediction("cleo",100.0);
-            //prediction = Model.predict(tmpPath);
+            prediction.setPrediction(Model.predict(tmpPath));
         }catch (Exception e){
             return null;
         }
+        System.out.println("HERE" + prediction.getPrediction());
         return prediction;
     }
 
