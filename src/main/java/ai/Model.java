@@ -109,20 +109,19 @@ public class Model {
         model = new MultiLayerNetwork(configuration);
         model.init();
         //model.setListeners(new ScoreIterationListener(1));
-        UIServer uiServer = UIServer.getInstance();
+        //UIServer uiServer = UIServer.getInstance();
 
-        //Configure where the network information (gradients, activations, score vs. time etc) is to be stored
-        //Then add the StatsListener to collect this information from the network, as it trains
-        StatsStorage statsStorage = new FileStatsStorage(new File(System.getProperty("java.io.tmpdir"), "ui-stats.dl4j"));
-        int listenerFrequency = 1;
-        model.setListeners(new StatsListener(statsStorage, listenerFrequency));
 
-        //Attach the StatsStorage instance to the UI: this allows the contents of the StatsStorage to be visualized
-        uiServer.attach(statsStorage);
+        //StatsStorage statsStorage = new FileStatsStorage(new File(System.getProperty("java.io.tmpdir"), "ui-stats.dl4j"));
+        //int listenerFrequency = 1;
+        //model.setListeners(new StatsListener(statsStorage, listenerFrequency));
+
+
+        //uiServer.attach(statsStorage);
         for(int epoch=0; epoch<EPOCHS; epoch++) {
             model.fit(trainingData);
         }
-        model.save(new File("./model.h5"));
+        model.save(new File("./model2.h5"));
     }
 
     private void evaluate(){
@@ -131,13 +130,21 @@ public class Model {
     }
 
     public static String predict(String path) throws IOException {
-        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(new File("./model.h5"),true);
+        System.out.println("Started prediction...");
+        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(new File("./model2.h5"),false);
+        System.out.println("Loaded model...");
         File f=new File(path);
+        System.out.println("x");
         NativeImageLoader loader = new NativeImageLoader(50, 50, 1);
+        System.out.println("xx");
         INDArray image = loader.asMatrix(f);
+        System.out.println("xxx");
         DataNormalization scalar = new ImagePreProcessingScaler(0, 1);
+        System.out.println("xxxx");
         scalar.transform(image);
+        System.out.println("xxxxx");
         INDArray output = model.output(image);
+        System.out.println("Finishing...");
         return explainPrediction(output);
     }
 
